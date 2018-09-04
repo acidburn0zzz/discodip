@@ -22,8 +22,8 @@ function build(config) {
       components: null,
       force: false,
       output: null,
-      componentHeadHtml: "",
-      componentBodyHtml: "",
+      headHtml: "",
+      bodyHtml: "",
       prerender: null,
       onComplete: null
     },

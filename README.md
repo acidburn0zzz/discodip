@@ -42,8 +42,8 @@ const build = require("discodip");
 build({
   output: "httpdocs/my-components/",
   components: "httpdocs/components.json",
-  componentHeadHtml: "<style>body{background:red}</style>",
-  componentBodyHtml: "<script>alert('hello')</script>",
+  headHtml: "<style>body{background:red}</style>",
+  bodyHtml: "<script>alert('hello')</script>",
   prerender: {
     port: 3000,
     path: "my-components/",
@@ -69,8 +69,8 @@ Now you can iframe them wherever you like or use javascript to get the metadata 
 | --------------------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **output**            | null     | string   | output directory                                                                                                                                                                                                                                               |
 | **components**        | null     | string   | .json-file holding all components                                                                                                                                                                                                                              |
-| componentHeadHtml     | ""       | string   | string of html to include in the body                                                                                                                                                                                                                          |
-| componentBodyHtml     | ""       | string   | string of html to include in the head                                                                                                                                                                                                                          |
+| headHtml              | ""       | string   | string of html to include in the body                                                                                                                                                                                                                          |
+| bodyHtml              | ""       | string   | string of html to include in the head                                                                                                                                                                                                                          |
 | prerender             | null     | object   | prerender all components to get their heights (at 1200px wide browser window, using Puppeteer). This speeds up the user interface and makes it less jumpy. However, this makes compiling slower because it needs to open all components in a headless browser. |
 | prerender.port        | ""       | number   | static server port for rendering components (http://localhost:{port})                                                                                                                                                                                          |
 | prerender.path        | ""       | string   | path to folder (http://localhost:{port}/{path})                                                                                                                                                                                                                |

@@ -13,8 +13,8 @@ test("basic render", async t => {
       silent: true,
       output: OUTPUT,
       components: "test/fixtures/components.json",
-      componentHeadHtml: "<style>body{background:red}</style>",
-      componentBodyHtml: "<script>//hello</script>",
+      headHtml: "<style>body{background:red}</style>",
+      bodyHtml: "<script>//hello</script>",
       onComplete: () => {
         t.true(
           fs.existsSync("test/tmp/render/component1.html"),
