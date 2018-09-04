@@ -1,0 +1,45 @@
+{
+  "name": "discodip",
+  "version": "1.0.0",
+  "description": "Embeddable HTML components generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test/*.js --serial --verbose",
+    "prepublishOnly": "npm test",
+    "precommit": "pretty-quick --staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EightMedia/discodip.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "components",
+    "styleguide",
+    "pattern",
+    "library"
+  ],
+  "author": "Arjen Scherff-de Water",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EightMedia/discodip/issues"
+  },
+  "homepage": "https://github.com/EightMedia/discodip#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0"
+  },
+  "dependencies": {
+    "death": "^1.1.0",
+    "finalhandler": "^1.1.1",
+    "killable": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "puppeteer": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "serve-static": "^1.13.2",
+    "signale": "^1.2.1"
+  }
+}
