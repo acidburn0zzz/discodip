@@ -1,6 +1,6 @@
 # Discodip
 
-Embeddable HTML components generator.
+Embeddable-HTML-components generator.
 
 Transforms a set of component name/description/HTML-source objects into separate .html-files, along with .json-files containing component meta information. Can be used for embedding standalone components inside a ~design-system~ ~styleguide~ ~pattern~ ~library~ thing.
 
