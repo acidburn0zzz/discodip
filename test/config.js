@@ -25,15 +25,18 @@ test("options.components is required", t => {
   t.is(error.message, "options.components is required");
 });
 
-test("error parsing components JSON", t => {
+test("components JSON not found", t => {
   const error = t.throws(() => {
     build({
       silent: true,
       output: OUTPUT,
-      components: "test/fixtures/components-err.json"
+      components: "test/fixtures/components--.json"
     });
   }, Error);
-  t.is(error.message, "Error parsing JSON test/fixtures/components-err.json");
+  t.is(
+    error.message,
+    "Components file not found test/fixtures/components--.json"
+  );
 });
 
 test("complete", async t => {

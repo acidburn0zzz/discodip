@@ -15,7 +15,7 @@ test("get components height", async t => {
     });
 
     server.on("listening", () => {
-      let puppet = cp.fork(`lib/puppeteer.js`);
+      const puppet = cp.fork(`lib/puppeteer.js`);
 
       puppet.once("message", function(data) {
         if (data === "puppeteer-ready") {

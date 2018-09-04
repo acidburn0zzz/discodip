@@ -67,17 +67,8 @@ function build(config) {
     options.force = true;
   }
 
-  // read components JSON file
-  // and parse JSON
-  let componentsJSON = null;
-  if (fs.existsSync(paths.components)) {
-    componentsJSON = fs.readFileSync(paths.components, "utf8");
-    try {
-      componentsJSON = JSON.parse(componentsJSON);
-    } catch (err) {
-      throw new Error(`Error parsing JSON ${options.components}`);
-    }
-  } else {
+  // check components JSON file
+  if (!fs.existsSync(paths.components)) {
     throw new Error(`Components file not found ${options.components}`);
   }
 
@@ -86,7 +77,6 @@ function build(config) {
     `${__dirname}/lib/render.js`,
     [
       JSON.stringify({
-        components: componentsJSON,
         options: options,
         paths: paths
       })
@@ -122,6 +112,11 @@ module.exports = build;
 
 function log(str) {
   const message = str.split("::");
+
+  if (message[0] === "fatal") {
+    message[0] = new Error(message[1]);
+    throw message[0];
+  }
 
   if (message[1]) {
     signale[message[0]](message[1]);
