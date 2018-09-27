@@ -1,0 +1,43 @@
+[
+  {
+    "meta": {
+      "name": "examples",
+      "examples": [
+        "div.example1a\n  block\n",
+        "div.example1b\n  block\n",
+        "div.example2\n  block\n",
+        "div.example3\n  block\n",
+        "div.example4\n  block\n"
+      ]
+    },
+    "file": "test/fixtures/examples-objects.pug",
+    "source": "p this is my example",
+    "output": "<div class=\"example1a\"><p>this is my example</p></div><div class=\"example1b\"><p>this is my example</p></div><div class=\"example2\"><p>this is my example</p></div><div class=\"example3\"><p>this is my example</p></div><div class=\"example4\"><p>this is my example</p></div>",
+    "subexamples": [
+      {
+        "meta": {
+          "name": "Component 1",
+          "description": "description 1",
+          "examples": ["div.example1a\n  block\n", "div.example1b\n  block\n"]
+        },
+        "output": "<div class=\"example1a\"><p>this is my example</p></div><div class=\"example1b\"><p>this is my example</p></div>"
+      },
+      {
+        "meta": {
+          "name": "Component 2",
+          "description": "description 2",
+          "example": ["div.example2\n  block\n"]
+        },
+        "output": "<div class=\"example2\"><p>this is my example</p></div>"
+      },
+      {
+        "meta": {
+          "name": "Component 3",
+          "description": "description 3",
+          "example": "div.example3\n  block\n"
+        },
+        "output": "<div class=\"example3\"><p>this is my example</p></div>"
+      }
+    ]
+  }
+]

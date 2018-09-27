@@ -42,7 +42,7 @@ test("basic render", async t => {
         );
         t.true(
           fs.existsSync("test/tmp/render/.config.json"),
-          "component3 JSON exists"
+          "config JSON exists"
         );
 
         setTimeout(() => {

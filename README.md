@@ -1,4 +1,5 @@
 # Discodip
+
 ![discodip](https://user-images.githubusercontent.com/580312/45072946-685d3500-b0dd-11e8-81f7-8b1792e1d9c8.png)
 
 Embeddable-HTML-components generator.
@@ -28,7 +29,16 @@ This is what the json file containing all components should look like. Use any t
       "name": "my-component",
       "description": "this is my component description"
     },
-    "output": "<div class=\"some-tag\">this is some html</div>"
+    "output": "<div class=\"some-tag\">this is some html</div><div class=\"some-tag\">this is some more html</div>",
+    "subexamples": [
+      {
+        "meta": {
+          "name": "my-component",
+          "description": "this is my component description"
+        },
+        "output": "<div class=\"some-tag\">this is some more html</div>"
+      }
+    ]
   }
 ]
 ```
