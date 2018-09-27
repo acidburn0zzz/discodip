@@ -37,7 +37,7 @@
     "finalhandler": "^1.1.1",
     "killable": "^1.0.0",
     "mkdirp": "^0.5.1",
-    "puppeteer": "^1.7.0",
+    "puppeteer": "^1.8.0",
     "rimraf": "^2.6.2",
     "serve-static": "^1.13.2",
     "signale": "^1.2.1"

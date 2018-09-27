@@ -20,14 +20,14 @@ test("prerender", async t => {
             output: OUTPUT,
             prerender: {
               port: 3000,
-              path: "test/tmp/wip",
+              path: "test/tmp/prerender",
               serveFolder: ""
             }
           },
           paths: {
             output: path.resolve(OUTPUT),
             components: path.resolve("test/fixtures/components.json"),
-            config: path.resolve("test/tmp/wip/.config.json")
+            config: path.resolve("test/tmp/prerender/.config.json")
           }
         })
       ],
