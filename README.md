@@ -30,7 +30,7 @@ This is what the json file containing all components should look like. Use any t
       "description": "this is my component description"
     },
     "output": "<div class=\"some-tag\">this is some html</div><div class=\"some-tag\">this is some more html</div>",
-    "subexamples": [
+    "fragments": [
       {
         "meta": {
           "name": "my-component",
